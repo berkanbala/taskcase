@@ -1,2 +1,18 @@
 .container {
+  .header {
+    height: 80px;
+  }
+
+  .outlet {
+    min-height: calc(100vh - 130px);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer {
+    height: 50px;
+  }
 }

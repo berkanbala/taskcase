@@ -1,2 +1,22 @@
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  color: #f1f1f1;
+
+  background-image: linear-gradient(
+    to right,
+    #c26b3d,
+    #d68c6f,
+    #db8b74,
+    #f39180,
+    #e38880,
+    #e85c66
+  );
+
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }
