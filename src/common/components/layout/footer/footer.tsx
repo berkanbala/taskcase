@@ -5,7 +5,7 @@ export default function Footer(props: Props) {
   const { className } = props;
   return (
     <div className={classNames(className, styles.container)}>
-      © Copyright 2024 | All Rights Reserved
+      © Copyright 2024 | Designed By Beerkaan
     </div>
   );
 }
