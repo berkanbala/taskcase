@@ -1,13 +1,12 @@
 .container {
+  width: 40%;
   text-align: center;
   display: block;
-  justify-content: space-between;
-  flex-direction: row;
   margin-bottom: 60px;
 
   .form {
-    max-width: 600px;
-    width: 100%;
+    // max-width: 600px;
+    // width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -22,11 +21,33 @@
     .formInput {
       input {
         height: 30px;
+
+        &:focus {
+          // outline: 1px solid rgb(0, 0, 0);
+          box-shadow: 0px 2px 4px 2px #c4c4c4;
+        }
+        &:active {
+          text-decoration: none;
+        }
+        &:hover {
+          border-color: rgb(0, 0, 0);
+        }
       }
     }
     .textArea {
       input {
         height: 80px;
+
+        &:focus {
+          // outline: 0.1px solid rgb(0, 0, 0);
+          box-shadow: 0px 2px 4px 2px #c4c4c4;
+        }
+        &:active {
+          text-decoration: none;
+        }
+        &:hover {
+          border-color: rgb(0, 0, 0);
+        }
       }
     }
   }

@@ -30,7 +30,7 @@ export default function Header(props: Props) {
           <li
             className={styles.item}
             style={{
-              marginLeft: "60px",
+              marginLeft: "80px",
             }}
           >
             <Link className={styles.link} to="/contact">

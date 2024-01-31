@@ -8,10 +8,15 @@
     width: 100%;
     height: 100%;
     padding: 8px 12px;
-    border: 2px solid #00090d8a;
+    border: 1px solid #00090d8a;
     border-radius: 10px;
     outline: none;
     transition: 0.5s;
+    box-shadow: inset 0 0 0 1px #6c6c6b56;
     font-size: 15px;
+
+    &::placeholder {
+      color: #a9a9a9;
+    }
   }
 }
