@@ -1,7 +1,7 @@
 import Button from "../../common/components/ui/button/button";
 import Input from "../../common/components/ui/input/input";
 import styles from "./contact.module.scss";
-import { useFormHook } from "../../common/components/hooks/useFormHook";
+import { useFormHook } from "../../common/hooks/useFormHook";
 import { validate } from "../../common/modals/validation";
 
 export default function Contact() {

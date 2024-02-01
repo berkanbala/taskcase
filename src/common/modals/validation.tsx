@@ -9,3 +9,10 @@ export const validate = (props: any) => {
   }
   return true;
 };
+
+export const validateLogin = (authname: any, authpasswords: any) => {
+  if (authname === "" || authpasswords === "") {
+    return false;
+  }
+  return false;
+};
