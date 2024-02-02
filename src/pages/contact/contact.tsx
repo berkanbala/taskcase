@@ -1,7 +1,7 @@
 import Button from "../../common/components/ui/button/button";
 import Input from "../../common/components/ui/input/input";
 import styles from "./contact.module.scss";
-import { useFormHook } from "../../common/hooks/useFormHook";
+import useFormHook from "../../common/hooks/useFormHook";
 import { validate } from "../../common/modals/validation";
 
 export default function Contact() {
@@ -53,6 +53,8 @@ export default function Contact() {
             value={form.phone}
             onChange={setForm}
             name="phone"
+            maxlength={"10"}
+            pattern="[0-9]{10}"
           />
 
           <Input
@@ -67,7 +69,6 @@ export default function Contact() {
           <Button
             type="submit"
             text={"Submit"}
-            // onClick={() => console.log(1)}
             disabled={Object.values(form).some((formValue) => formValue === "")}
           />
         </div>

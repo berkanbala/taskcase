@@ -1,9 +1,9 @@
-import { useState } from "react";
 import Button from "../../components/ui/button/button";
 import Input from "../../components/ui/input/input";
-import { useAppContext } from "../../context/appContext";
 import styles from "./loginModal.module.scss";
 import IconX from "../../media/icons/x.png";
+import { useState } from "react";
+import { useAppContext } from "../../context/appContext";
 import { validateLogin } from "../validation";
 
 export default function LoginModal() {
@@ -17,7 +17,7 @@ export default function LoginModal() {
 
   const proceedLogin = (e: any) => {
     e.preventDefault();
-    if (!validateLogin(firstNameValue, passwordValue)) {
+    if (validateLogin(firstNameValue, passwordValue)) {
       return;
     }
 
@@ -38,29 +38,41 @@ export default function LoginModal() {
   if (!loginModalVisible) return null;
 
   return (
-    <div className={styles.container} onClick={handleModal}>
-      <div className={styles.content} onClick={handlePropagation}>
-        <div className={styles.modalTitle}>başlık</div>
-        <form className={styles.modalForm} onSubmit={proceedLogin}>
+    <div onClick={handleModal} className={styles.container}>
+      <div onClick={handlePropagation} className={styles.content}>
+        <div className={styles.modalTitle}>
+          <h1>Giriş Yap</h1>
+        </div>
+        <form onSubmit={proceedLogin} className={styles.modalForm}>
           <Input
             type="text"
             name="authname"
-            placeholder="username"
+            placeholder="Username"
             value={firstNameValue}
             onChange={(e: any) => setFirstNameValue(e.target.value)}
+            required
           />
+
           <Input
-            type="passwords"
+            type="password"
             name="authpasswords"
-            placeholder="userpasswords"
+            placeholder="Password"
             value={passwordValue}
             onChange={(e: any) => setPasswordValue(e.target.value)}
+            required
           />
-          <Button type="submit" text="submit" className={styles.button} />
+
+          <Button
+            type="submit"
+            text="Submit"
+            disabled={Object.values({ firstNameValue, passwordValue }).some(
+              (loginValue) => loginValue === ""
+            )}
+          />
         </form>
 
-        <span className={styles.close} onClick={handleModal}>
-          <img src={IconX} alt="closeButton" width={50} height={50} />
+        <span onClick={handleModal} className={styles.close}>
+          <img src={IconX} alt="closeButton" width={45} height={45} />
         </span>
       </div>
     </div>

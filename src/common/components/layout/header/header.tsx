@@ -31,6 +31,7 @@ export default function Header(props: Props) {
             <li className={styles.title}>
               <h2>TASK || CASE</h2>
             </li>
+
             <li
               className={styles.item}
               style={{
@@ -58,9 +59,9 @@ export default function Header(props: Props) {
         <ul className={styles.itemx} style={{ marginRight: "40px" }}>
           {auth ? (
             <li className={styles.dropdown}>
-              <div className={styles.dropbtn}>{user} </div>
+              <div className={styles.dropbtn}>{user}</div>
               <div className={styles.dropdowncontent}>
-                <span onClick={handleExit}>logout </span>
+                <span onClick={handleExit}>logout</span>
               </div>
             </li>
           ) : (

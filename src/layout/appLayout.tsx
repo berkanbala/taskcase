@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
 import Header from "../common/components/layout/header/header";
 import styles from "./appLayout.module.scss";
 import Footer from "../common/components/layout/footer/footer";
+import { Outlet } from "react-router-dom";
 
 export default function AppLayout() {
   return (

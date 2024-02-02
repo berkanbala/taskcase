@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useFormHook = (params: any) => {
+export default function useFormHook(params: any) {
   const [form, setForm] = useState(params);
 
   const handleChange = (event: any) => {
@@ -11,4 +11,4 @@ export const useFormHook = (params: any) => {
     }
   };
   return [form, handleChange];
-};
+}
