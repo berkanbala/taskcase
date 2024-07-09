@@ -1,48 +1,89 @@
+@import "../../common/assets/styles/variable.scss";
+
 .container {
-  width: 40%;
+  width: 100%;
   text-align: center;
-  display: block;
+  display: flex;
   margin-bottom: 60px;
 
-  .form {
+  form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    width: 67%;
+
     h1 {
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
-      color: #000000;
+      color: $black;
       margin: 10px;
     }
-    .formInput {
-      input {
-        height: 30px;
 
-        &:focus {
-          box-shadow: 0px 2px 4px 2px #c4c4c4;
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      .messageImage {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        font-family: Montserrat-Regular, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 35%;
+        will-change: transform;
+        transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+      }
+
+      @keyframes svelte-n13uhx-loadingSpinner {
+        from {
+          transform: translate(-50%, -50%) rotate(0);
         }
-        &:active {
-          text-decoration: none;
-        }
-        &:hover {
-          border-color: rgb(0, 0, 0);
+
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
         }
       }
-    }
-    .textArea {
-      input {
-        height: 80px;
 
-        &:focus {
-          box-shadow: 0px 2px 4px 2px #c4c4c4;
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        .formInput {
+          input {
+            height: 30px;
+
+            &:focus {
+              box-shadow: 0px 2px 4px 2px $grey;
+            }
+            &:active {
+              text-decoration: none;
+            }
+            &:hover {
+              border-color: $black;
+            }
+          }
         }
-        &:active {
-          text-decoration: none;
-        }
-        &:hover {
-          border-color: rgb(0, 0, 0);
+        .textArea {
+          input {
+            height: 80px;
+
+            &:focus {
+              box-shadow: 0px 2px 4px 2px $grey;
+            }
+            &:active {
+              text-decoration: none;
+            }
+            &:hover {
+              border-color: $black;
+            }
+          }
         }
       }
     }

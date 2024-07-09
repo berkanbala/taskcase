@@ -1,4 +1,5 @@
 import styles from "./textHome.module.scss";
+
 export default function TextHome() {
   return (
     <div className={styles.content}>

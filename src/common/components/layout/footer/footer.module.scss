@@ -1,3 +1,5 @@
+@import "../../../assets/styles/variable.scss";
+
 .container {
   font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial,
     sans-serif;
@@ -9,17 +11,17 @@
   position: fixed;
   width: 100%;
   padding: 10px;
-  color: #f1f1f1;
+  color: $white;
 
   background-image: linear-gradient(
     to right,
-    #c26b3d,
-    #d68c6f,
-    #db8b74,
-    #f39180,
-    #e38880,
-    #e85c66
+    $orange1,
+    $orange2,
+    $orange3,
+    $orange4,
+    $orange5,
+    $orange6
   );
 
-  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  box-shadow: 0 4px 15px 0 $purple;
 }

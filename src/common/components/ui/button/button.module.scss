@@ -1,8 +1,10 @@
+@import "../../../assets/styles/variable.scss";
+
 .container {
   width: 200px;
   font-size: 16px;
   font-weight: 600;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   margin-top: 20px;
   height: 55px;
@@ -10,9 +12,9 @@
   background-size: 300% 100%;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
-  background-color: #e88e7b;
-  color: rgb(238, 238, 238);
-  border-color: hsl(0, 0%, 40%);
+  background-color: $orange;
+  color: $white1;
+  border-color: $grey4;
   align-items: center;
   justify-content: center;
   display: flex;
